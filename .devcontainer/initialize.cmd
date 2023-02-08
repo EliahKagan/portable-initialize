@@ -1,2 +1,2 @@
 @echo off
-echo "Running initializeCommand - Windows."
+echo Running initializeCommand - Windows.
