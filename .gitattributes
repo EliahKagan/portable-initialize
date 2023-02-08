@@ -1,0 +1,2 @@
+.devcontainer/initialize text eol=lf
+.devcontainer/initialize.cmd text eof=crlf
