@@ -1,4 +1,23 @@
 {
+    "name": "portable-initialize",
     "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bierner.markdown-preview-github-styles",
+                "eamodio.gitlens",
+                "GitHub.vscode-pull-request-github",
+                "mads-hartmann.bash-ide-vscode",
+                "mhutchie.git-graph",
+                "stkb.rewrap",
+                "streetsidesoftware.code-spell-checker",
+                "timonwong.shellcheck"
+            ],
+            "settings": {
+                "gitlens.showWelcomeOnInstall": false,
+                "gitlens.showWhatsNewAfterUpgrades": false
+            }
+        }
+    },
     "initializeCommand": [".devcontainer/initialize"]
 }
