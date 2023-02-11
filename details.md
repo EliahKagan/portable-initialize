@@ -217,6 +217,16 @@ available. WSL is not always available, and relying on an *additional* WSL
 system for dev containers, which are Docker-based, could be confusing and, on
 some systems, lead to excessive resource usage.
 
+### A more detailed example
+
+The `initialize` and `initialize.cmd` scripts in this repository are very
+simple, just printing messages indicating which system the script is running
+on.
+
+A more detailed example, with nontrivial logic implemented in both a shell
+script and a batch file, is available [in
+VidDraw](https://github.com/EliahKagan/VidDraw/tree/master/.devcontainer).
+
 ## Alternative: Do you need it at all?
 
 The simplest way to avoid an unportable `initializeCommand` is to not use
