@@ -15,15 +15,22 @@
 
 # Using `initializeCommand` portably
 
-This repository has a dev container configuration that uses `initializeCommand`
+<!-- Repo description: Dev container with cross-platform initializeCommand -->
+
+This repository [defines](.devcontainer/) a [dev
+container](https://code.visualstudio.com/docs/devcontainers/containers) that
+uses
+[`initializeCommand`](https://containers.dev/implementors/json_reference/#lifecycle-scripts)
 and works on both Unix-like hosts (GNU/Linux and macOS) and Windows hosts, even
 though Unix-like and Windows systems do not, in general, share any scripting
 runtime.
 
 Note that, while `initializeCommand` always runs in an environment associated
-with the host and is never run inside the container, this environment is
-*usually* still a Linux-based system. So this technique is [only
-occasionally](#where-initializecommand-runs) needed.
+with the host and is never run inside the container, this host-associated
+environment is [usually still a Linux-based system, even on
+Windows](https://github.com/microsoft/vscode-remote-release/issues/6891). So
+this technique is [only occasionally
+needed](details.md#where-initializecommand-runs).
 
 ## License
 
@@ -37,10 +44,11 @@ See [**`LICENSE`**](LICENSE).
 
 Running a command like `./xyz` on Unix-like systems runs a file whose name is
 exactly `xyz`. But on Windows, it will prefer files with extensions indicating
-they are executable. So if you have a shell script with no extension, and a
-batch file named similarly except for its `.cmd` extension, then the same
-command in `devcontainer.json` will run the shell script or the batch file:
-whichever one of them the host supports.
+they are executable. So if you have a [shell
+script](https://en.wikipedia.org/wiki/Shell_script) with no extension, and a
+[batch file](https://en.wikipedia.org/wiki/Batch_file) named similarly except
+for its `.cmd` extension, then the same command in `devcontainer.json` will run
+the shell script or the batch file: whichever one of them the host supports.
 
 If you name the shell script `initialize` and the batch file `initialize.cmd`,
 and you put them both directly in `.devcontainer/`, then this
@@ -63,3 +71,12 @@ The interesting files in this repository, besides this README, are:
 
 Of those files, all but [`details.md`](details.md) correspond to files you
 would create in your repository if you apply the technique suggested here.
+
+## Portability?
+
+Arguably, this technique does not really facilitate *portability*. What we are
+doing is writing two separate scripts and an `initializeCommand` that
+seamlessly selects the correct script. If the scripts should do the same thing,
+then that has to be achieved in the way they are written. This technique is
+*cross-platform*, but it does not automatically cause a script written for one
+system to work on another.
