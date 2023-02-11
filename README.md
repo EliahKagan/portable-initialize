@@ -66,8 +66,11 @@ The interesting files in this repository, besides this README, are:
 
 - [`details.md`](details.md), which gives an in-depth explanation
 - [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json)
-- [`.devcontainer/initialize`](.devcontainer/initialize), a shell script
-- [`.devcontainer/initialize.cmd`](.devcontainer/initialize.cmd), a batch file
+- [`.devcontainer/initialize`](.devcontainer/initialize), a [POSIX
+  shell](https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/utilities/V3_chap02.html)
+  script
+- [`.devcontainer/initialize.cmd`](.devcontainer/initialize.cmd), a [batch
+  file](https://stackoverflow.com/tags/batch-file/info)
 
 Of those files, all but [`details.md`](details.md) correspond to files you
 would create in your repository if you apply the technique suggested here.
