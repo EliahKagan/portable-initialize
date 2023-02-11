@@ -123,8 +123,8 @@ whatever customizations we need.
 
 ### `initialize` and `initialize.cmd` in this repository
 
-The [`.devcontainer/`](`.devcontainer/`) directory of this repository contains
-a shell script, `initialize`, and a batch file, `initialize.cmd`.
+The [`.devcontainer/`](.devcontainer/) directory of this repository contains a
+shell script, `initialize`, and a batch file, `initialize.cmd`.
 
 Even though `.devcontainer/initialize` exists, running that as a command on
 Windows runs `.devcontainer/initialize.cmd` instead.
