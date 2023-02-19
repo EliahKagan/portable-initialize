@@ -1,9 +1,7 @@
 {
   "httpHeaders": [
     {
-      "urls": [
-        "https://www.elevenforum.com/t/add-or-remove-wmic-command-feature-in-windows-11.5119/"
-      ],
+      "urls": ["https://", "http://"],
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"
       }
