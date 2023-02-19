@@ -181,7 +181,7 @@ Command-Line Utility,
 provides powerful scripting features. It is available on most Windows systems,
 but not all. It is [deprecated in Windows 10 21H1 and not automatically
 installed in Windows
-11](https://www.elevenforum.com/t/add-or-remove-wmic-command-feature-in-windows-11.5119/).
+11](https://web.archive.org/web/20221130232418/https://www.elevenforum.com/t/add-or-remove-wmic-command-feature-in-windows-11.5119/).
 This is [for security
 reasons](https://www.bleepingcomputer.com/news/microsoft/microsoft-starts-killing-off-wmic-in-windows-will-thwart-attacks/).
 
